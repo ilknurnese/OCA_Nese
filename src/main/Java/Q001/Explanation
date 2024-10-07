@@ -1,0 +1,18 @@
+
+x++: This is post-increment, meaning the current value of x (which is 1) is used first,
+        and then x is incremented by 1 after the comparison.
+++y: This is pre-increment, so y is incremented first (from 1 to 2),
+        and then the new value (2) is used in the comparison.
+
+The comparison becomes 1 < 2, which is true.
+Therefore, the code inside the if block is executed, and "Hello " is printed.
+
+____
+
+x++: Bu post-artırma operatörüdür. Önce mevcut x değeri kullanılır, ardından x bir artırılır.
+++y: Bu pre-artırma operatörüdür. Önce y değeri artırılır, ardından kullanılır.
+
+x++ ifadesinde, önce x değeri kullanılır, yani şu anki değeri 1'dir.
+    Artırma işlemi daha sonra gerçekleşir.
+++y ifadesinde, önce y değeri artırılır.
+    Başlangıçta y = 1 olduğu için, ++y ifadesi y'yi 2 yapar ve bu yeni değer (2) if koşulunda kullanılır.
