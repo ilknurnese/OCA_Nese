@@ -17,22 +17,26 @@ public class Q003 {
 
 The issue in this code is the use of DateTimeFormatter.ISO_DATE_TIME.
 
-When you parse a date string (e.g., "2016-11-01") with LocalDate.parse(), only the date (year, month, day) is assigned, and no time information is included.
+When you parse a date string (e.g., "2024-10-08") with LocalDate.parse(),
+only the date (year, month, day) is assigned, and no time information is included.
 
-However, when formatting the date using DateTimeFormatter.ISO_DATE_TIME, it expects both date and time information.
+However, when formatting the date using DateTimeFormatter.ISO_DATE_TIME,
+it expects both date and time information.
 
-Since LocalDate only contains date information and no time, using DateTimeFormatter.ISO_DATE_TIME will throw a DateTimeParseException.
+Since LocalDate only contains date information and no time,
+using DateTimeFormatter.ISO_DATE_TIME will throw a DateTimeParseException.
 
-If you only want to format the date, you should use DateTimeFormatter.ISO_DATE instead. Otherwise, if you use a formatter that expects time information, an exception will be thrown.
+If you only want to format the date, you should use DateTimeFormatter.ISO_DATE instead.
+Otherwise, if you use a formatter that expects time information, an exception will be thrown.
 
 Corrected code:
 java
 Copy code
 String date = LocalDate
-                  .parse("2016-11-01")
+                  .parse("2024-10-08")
                   .format(DateTimeFormatter.ISO_DATE);  // ISO_DATE_TIME should be replaced with ISO_DATE
 System.out.println(date);
-This way, the output will be "2016-11-01" and no exception will occur at runtime.
+This way, the output will be "2024-10-08" and no exception will occur at runtime.
 
 Correct answer:
 D. An exception is thrown at runtime.
