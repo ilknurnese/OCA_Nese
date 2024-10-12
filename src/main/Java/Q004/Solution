@@ -12,7 +12,6 @@
 			idx++;	                    // 1: idx = 0 , size = 2,      2: idx =1 , size = 2     -    3: idx =2 , size = 3  the loop ends
 			}						    // 1: idx =1,  	2: idx =2, 	3: idx =3, 		--> The top element: 30
 
-
 	C. 	do {							// Loop steps:
 			idx++;						// 1: idx = 0,   2: idx =1 ,
 		}while(idx < size-1);	        // 1: idx =1,  	2: idx =2, (2<2) is false loop ends	--> The top element: 30
