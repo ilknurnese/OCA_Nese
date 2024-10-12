@@ -45,7 +45,7 @@ D. An exception is thrown at runtime.
 
 Bu koddaki sorun, DateTimeFormatter.ISO_DATE_TIME     kullanılmasıdır.
 
-LocalDate.parse() ile bir tarih string'i (örneğin "2016-11-01") parse edildiğinde
+LocalDate.parse() ile bir tarih string'i (örneğin "2024-10-08") parse edildiğinde
 sadece tarih (yıl, ay, gün) bilgisi atanır, zaman bilgisi atanmaz.
 
 Ancak, formatlama sırasında DateTimeFormatter.ISO_DATE_TIME  kullanıldığında,  zaman bilgisi de beklenir.
@@ -59,10 +59,10 @@ Eğer yalnızca tarihi formatlamak istiyorsanız, DateTimeFormatter.ISO_DATE kul
 Düzeltilmiş kod:
 
 String date = LocalDate
-                  .parse("2016-11-01")
+                  .parse("2024-10-08")
                   .format(DateTimeFormatter.ISO_DATE);  // ISO_DATE_TIME yerine ISO_DATE kullanılmalı
 System.out.println(date);
-Bu şekilde çıktınız "2016-11-01" olur ve runtime'da exception oluşmaz.
+Bu şekilde çıktınız "2024-10-08" olur ve runtime'da exception oluşmaz.
 
 Doğru cevap:
 D. An exception is thrown at runtime.
