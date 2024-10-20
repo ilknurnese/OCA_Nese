@@ -1,0 +1,21 @@
+A. Replace line 13 with:
+B. Replace line 7 with throw IOException (ג€Exception raisedג€);
+C. Replace line 11 with public static void main(String[]) args) throws Exception { Most Voted
+D. At line 14, insert throw new IOException();
+E. Replace line 5 with public void printFileContent() throws IOException { Most Voted
+
+
+Suggested Answer: CE
+
+class X {
+public void printFileContent() throws IOException {
+throw new IOException();
+}
+}
+
+public class Test {
+public static void main(String[] args) throws IOException {
+X xobj = new X();
+xobj.printFileContent();
+}
+}
