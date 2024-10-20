@@ -1,0 +1,45 @@
+Code Explanation:
+
+String[][] arr = {{"A", "B", "C"}, {"D", "E"}};
+for (int i = 0; i < arr.length; i++) {
+    for (int j = 0; j < arr[i].length; j++) {
+        System.out.print(arr[i][j] + " ");
+        if (arr[i][j].equals("B")) {
+            continue;
+        }
+    }
+    continue;
+}
+
+
+The array arr is a 2D array with two rows:
+
+arr[0] = {"A", "B", "C"}
+arr[1] = {"D", "E"}
+The outer for loop iterates through the rows of the array (arr.length is 2).
+
+The inner for loop iterates through each element in a row.
+
+Inside the inner loop:
+
+The System.out.print(arr[i][j] + " ") prints each element followed by a space.
+The if statement checks if the current element is "B".
+If so, it uses the continue statement to skip the rest of the current iteration
+(but this does not affect the outer loop).
+
+Output:
+On the first iteration of the outer loop (i = 0), the inner loop iterates through {"A", "B", "C"}:
+
+A is printed.
+B is printed, then continue is hit, skipping any further code for B.
+C is printed.
+On the second iteration of the outer loop (i = 1), the inner loop iterates through {"D", "E"}:
+
+D is printed.
+E is printed.
+Thus, the output will be:
+
+A B C D E
+
+Correct Answer:
+B. A B C D E
